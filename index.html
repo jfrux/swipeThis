@@ -49,26 +49,31 @@
       swipeThis is a jQuery / jQuery mobile plugin for easily creating swipeable lists of items
     </div>
 
-    <p>Make a List Swipeable!!</p><h2>Dependencies</h2>
-<p>jQuery
-</p>
-<h2>Install</h2>
-<p># Using swipeThis jQuery Plugin
+<h2>Dependencies</h2>
+	<p>jQuery 1.5.x</p>
 
 
-## Import the scripts
+<h2> Using swipeThis jQuery Plugin</h2>
+
+
+<h3> Import the scripts</h3>
+<code>
     <script type="text/javascript" src="/js/jquery.js"></script> 
     <script type="text/javascript" src="/js/swipeThis.min.js"></script>
+</code><br/>
 
-## The Markup
+<h3> The Markup</h3>
+<code>
     <ul id="myGallery">
         <li><img src='img/photo1.jpg'></li>
         <li><img src='img/photo2.jpg'></li>
         <li><img src='img/photo3.jpg'></li>
     </ul>
+</code><br/>
 
 ## The style
-    <style...>
+<pre>
+    <style  type="text/css">
       .swipeThis {
         overflow:hidden;
       }
@@ -89,22 +94,25 @@
 	cursor:move;
     }
     </style>
-    
+</pre>    
 
-## Swipe It!
+<h3>Swipe It!</h3>
 
     $('#MyGallery').swipeThis();
-    
+ 
+ <br/>
 
-## Customize it
-
+<h3> Customize it </h3>
+<code>
     $('#myGallery').swipeThis({
         multiple:true,
         marginRight:15,
         indicator:'/img/swipeIndicator.png'});
-    
+   </code><br/> 
 
-## List of configuration Options:
+<br/>
+<h2> List of configuration Options:</h2>
+<ul>
 * Multiple (default: false)
 * fillContainer (default: true)
 * fullScreen (default: false)
@@ -114,13 +122,19 @@
 * marginRight: Margin applied to items in Multiple mode (default: 0)
 * speed: Transition speed (default: 100)
 * easein: jQuery easeIn function (default: '')
-* tolerance: (default: 0.5)</p>
+* tolerance: (default: 0.5)
+</ul>
+
+
 <h2>License</h2>
 <p>GNU</p>
 <h2>Authors</h2>
-<p>Pablo Fortes (fortes@noumeni.us)<br/><br/>      </p>
+<p>Pablo Fortes (fortes@noumeni.us)
+<br/>
+<br/>      </p>
 <h2>Contact</h2>
-<p>Fortes (fortes@noumeni.us)<br/>      </p>
+<p>Fortes (fortes@noumeni.us)
+<br/>      </p>
 
 
     <h2>Download</h2>
