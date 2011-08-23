@@ -27,6 +27,29 @@
     pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
+    
+    /* ---------------
+ *    Swipe This   
+ * --------------- */
+.swipeThis {
+    overflow:hidden;
+}
+.swipeThis ul {
+    list-style:none;
+    position:relative;
+    margin:0px;
+    padding:0px;   
+}
+.swipeThis li {
+    display:block;
+    float:left;   
+}
+.swipeArea {
+    position:absolute;
+    z-index:30;
+    background-image:url('https://raw.github.com/pfortes/swipeThis/master/img/trans.png');
+    cursor:move;
+}
   </style>
   
     <script type="text/javascript" src="https://raw.github.com/pfortes/swipeThis/master/js/jquery.js"></script> 
@@ -57,6 +80,25 @@
 <h4>Dependencies</h4>
 	<p>jQuery 1.5.x</p>
 
+
+<h2> Demo </h2>
+
+ <ul id="demo">
+        <li><img src='img/photo1.jpg'></li>
+        <li><img src='img/photo2.jpg'></li>
+        <li><img src='img/photo3.jpg'></li>
+    </ul>
+
+<h2> Demo 2 ( Multiple Items with links )</h2>
+
+ <ul id="demo2">
+        <li><a href='http://noumeni.us' target='_blank'><img src='img/photo1.jpg'></a></li>
+        <li><a href='http://el70.com' target='_blank'><img src='img/photo2.jpg'></a></li>
+        <li><a href='http://soundcloud.com/fortes' target='_blank'><img src='img/photo3.jpg'></a></li>
+    </ul>
+
+
+<hr/>
 
 <h2> Using swipeThis</h2>
 
@@ -97,7 +139,7 @@
       .swipeArea {
         position:absolute;
         z-index:30;
-        background-image:url(&#39;/assets/img/trans.png&#39;);
+        background-image:url(&#39;img/trans.png&#39;);
 	cursor:move;
     }
 &amp;lt;/style&amp;gt;
