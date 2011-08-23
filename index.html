@@ -1,21 +1,230 @@
-Plugin
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+
+  <title>swipeThis() - jQuery Plugin that makes a list Swipeable!</title>
+
+  <style type="text/css">
+    body {
+      margin-top: 1.0em;
+      background-color: #333;
+      font-family: Helvetica, Arial, FreeSans, san-serif;
+      color: #ffffff;
+    }
+    #container {
+      margin: 0 auto;
+      width: 900px;
+    }
+    h1 { font-size: 3.8em; color: #ec5e46; margin-bottom: 3px; }
+    h1 .small { font-size: 0.4em; }
+    h1 a { text-decoration: none }
+    h2 { font-size: 1.5em; color: #ec5e46; }
+    h3 { text-align: center; color: #ec5e46; }
+    a { color: #ec5e46; }
+    .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .download { float: right; }
+    .claro { color:#444; }
+    pre { background: #000; color: #fff; padding: 15px;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; }
+    
+    /* ---------------
+ *    Swipe This   
+ * --------------- */
+.swipeThis {
+    overflow:hidden;
+}
+.swipeThis ul {
+    list-style:none;
+    position:relative;
+    margin:0px;
+    padding:0px;   
+}
+.swipeThis li {
+    display:block;
+    float:left;   
+}
+.swipeArea {
+    position:absolute;
+    z-index:30;
+    background-image:url('https://raw.github.com/pfortes/swipeThis/master/img/trans.png');
+    cursor:move;
+}
+  </style>
+  
+    <script type="text/javascript" src="https://raw.github.com/pfortes/swipeThis/master/js/jquery.1.6.1.min.js"></script> 
+    <script type="text/javascript" src="https://raw.github.com/pfortes/swipeThis/master/js/jquery.swipeThis.0.7.3.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('#demo').swipeThis();
+      
+      $('#demo2').swipeThis({
+        multiple:true,
+        marginRight:15,
+        indicator:'https://raw.github.com/pfortes/swipeThis/master/img/flecha48x48.png'});
+    });
+
+    
+    </script>
+
+	
+	
+</head>
+
+<body>
+  <a href="http://github.com/pfortes/swipeThis"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+
+  <div id="container">
+
+    <div class="download">
+      <a href="http://github.com/pfortes/swipeThis/zipball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a>
+      <a href="http://github.com/pfortes/swipeThis/tarball/master">
+        <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a>
+    </div>
+
+    <h1><a href="http://github.com/pfortes/swipeThis">.swipeThis()</a></h1>
+
+    <div class="description">
+      swipeThis is a jQuery / jQuery mobile plugin for easily creating swipeable lists of items.<br/><br/>
+      
+      It is prepared to work on mobile devices and desktop browsers, you can have one or multiple items visible, 
+      items can be clickable / tapable, and much more..<br/>
+    </div>
+
+<h4>Dependencies</h4>
+	<p>jQuery 1.5.x</p>
 
 
-download
+<h2> Simple Demo </h2>
+
+ <ul id="demo">
+        <li><img src='http://el70.com/img/donGoio.jpg'></li>
+        <li><img src='http://el70.com/img/fortesMusica.png'></li>
+        <li><img src='http://el70.com/img/mejicanLost.png'></li>
+    </ul>
+
+<h2> Demo of Multiple Items with links </h2>
+
+ <ul id="demo2">
+  <li>
+    <a href='http://visualma.com' target='_blank'>
+      <img src='http://el70.com/img/visualma.png'>
+    </a>
+  </li>
+  <li>
+    <a href='http://el70.com' target='_blank'>
+      <img src='http://el70.com/img/uku.png'>
+    </a>
+  </li>
+  <li>
+    <a href='http://el70.com' target='_blank'>
+      <img src='http://el70.com/img/tiagosan.png'>
+    </a>
+  </li>
+</ul>
 
 
+<hr/>
 
-DEMO
-
-
-
-
-Usage:
+<h2> Using swipeThis</h2>
 
 
+<h4> Import the scripts </h4>
+	<pre>
+	    &lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.1.6.1.min.js&quot;&gt;&lt;/script&gt; 
+	    &lt;script type=&quot;text/javascript&quot; src=&quot;/js/swipeThis.0.7.3.min.js&quot;&gt;&lt;/script&gt;
+	</pre>
+<br/>
 
-Demo multiple
+<h4> The Markup </h4>
+<pre><code>
+    &lt;ul id="myGallery"&gt;
+        &lt;li&gt;&lt;img src='img/photo1.jpg'>&lt;/li&gt;
+        &lt;li&gt;&lt;img src='img/photo2.jpg'>&lt;/li&gt;
+        &lt;li&gt;&lt;img src='img/photo3.jpg'>&lt;/li&gt;
+    &lt;/ul&gt;
+    </code></pre>
+<br/>
 
+<h4> The style</h4>
+<pre>
+&amp;lt;style  type=&quot;text/css&quot;&amp;gt;
+      .swipeThis {
+        overflow:hidden;
+      }
+      .swipeThis ul {
+        list-style:none;
+        position:relative;
+        margin:0px;
+        padding:0px;   
+      }
+      .swipeThis li {
+         display:block;
+         float:left;   
+      }
+      .swipeArea {
+        position:absolute;
+        z-index:30;
+        background-image:url(&#39;img/trans.png&#39;);
+	cursor:move;
+    }
+&amp;lt;/style&amp;gt;
+</pre>    
 
-Usage
+<h3>Swipe It!</h3>
+<pre>
+    <span class='claro'>$(document).ready(function() {</span>
+      $('#MyGallery').swipeThis();
+    <span class='claro'>});</span>
+</pre>
+<br/>
 
+<h4> Customize it! </h4>
+<pre>
+ <span class='claro'>$(document).ready(function() {</span>
+    $('#myGallery').swipeThis({
+        multiple:true,
+        marginRight:15,
+        indicator:'/img/swipeIndicator.png'});
+  <span class='claro'>});</span>
+</pre> 
+
+<br/>
+<h2> List of configuration Options:</h2>
+<ul>
+  <li> Multiple (default: false)</li>
+  <li> fillContainer (default: true)</li>
+  <li> fullScreen (default: false)</li>
+  <li> itemWidth (default: 170)</li>
+  <li> itemHeight (default: 140)</li>
+  <li> indicator : Image url for the icon that tells users to swipe to see more content. (default: '')</li>
+  <li> marginRight: Margin applied to items in Multiple mode (default: 0)</li>
+  <li> speed: Transition speed (default: 100)</li>
+  <li> easein: jQuery easeIn function (default: '')</li>
+  <li> tolerance: (default: 0.5)</li>
+</ul>
+<br/>
+<h2>Download</h2>
+    <p>
+      You can download this project in either
+      <a href="http://github.com/pfortes/swipeThis/zipball/master">zip</a> or
+      <a href="http://github.com/pfortes/swipeThis/tarball/master">tar</a> formats.
+    </p>
+    <p>You can also clone the project with <a href="http://git-scm.com">Git</a>
+      by running:
+      <pre>$ git clone git://github.com/pfortes/swipeThis</pre>
+    </p>
+
+    <div class="footer">
+<p>License: GNU</p>
+<p>Author: <a href='http://gplus.to/fortes' target='_blank'>Pablo Fortes</a></p>
+get the source code on GitHub : <a href="http://github.com/pfortes/swipeThis">pfortes/swipeThis</a>
+    </div>
+
+  </div>
+
+  
+</body>
+</html>
