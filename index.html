@@ -24,33 +24,47 @@
     a { color: #ec5e46; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
-    .claro { color:#444; }
+    .claro { color:#666; }
     pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
     
     /* ---------------
- *    Swipe This   
- * --------------- */
-.swipeThis {
-    overflow:hidden;
-}
-.swipeThis ul {
-    list-style:none;
-    position:relative;
-    margin:0px;
-    padding:0px;   
-}
-.swipeThis li {
-    display:block;
-    float:left;   
-}
-.swipeArea {
-    position:absolute;
-    z-index:30;
-    background-image:url('img/trans.png');
-    cursor:move;
-}
+     *    Swipe This   
+     * --------------- */
+    .swipeThis {
+        overflow:hidden;
+    }
+    .swipeThis ul {
+        list-style:none;
+        position:relative;
+        margin:0px;
+        padding:0px;   
+    }
+    .swipeThis li {
+        display:block;
+        float:left;   
+    }
+    .swipeArea {
+        position:absolute;
+        z-index:30;
+        background-image:url('img/trans.png');
+        cursor:move;
+    }
+    
+    .demoContent {
+     height:200px;
+     width:400px;
+     margin-left:auto;
+     margin-right:auto;
+    }
+    
+     .demo2Content {
+     height:200px;
+     width:800px;
+     margin-left:auto;
+     margin-right:auto;
+    }
   </style>
   
     <script type="text/javascript" src="js/jquery.1.6.1.min.js"></script> 
@@ -60,9 +74,13 @@
       $('#demo').swipeThis();
       
       $('#demo2').swipeThis({
-        multiple:true,
-        marginRight:15,
-        indicator:'img/flecha48x48.png'});
+	'fillContainer': false,
+	'multiple': true,
+	'itemWidth': 372,
+	'itemHeight': 100, 
+	'marginRight' : 30,
+        'indicator':'img/flecha48x48.png'
+      });
     });
 
     
@@ -98,34 +116,42 @@
 
 
 <h2> Simple Demo </h2>
-
+<div class='demoContent'>
  <ul id="demo">
-        <li><img src='http://el70.com/img/donGoio.jpg'></li>
-        <li><img src='http://el70.com/img/fortesMusica.png'></li>
-        <li><img src='http://el70.com/img/mejicanLost.png'></li>
-    </ul>
+    <li><img src='http://el70.com/img/donGoio.jpg'></li>
+    <li><img src='http://el70.com/img/fortesMusica.png'></li>
+    <li><img src='http://el70.com/img/mejicanLost.png'></li>
+  </ul>
+</div>
 
-<h2> Demo of Multiple Items with links </h2>
-
+<br/><br/>
+<h2> Demo with Multiple Items and links </h2>
+<div class='demo2Content'>
  <ul id="demo2">
+   <li>
+    <a href="http://worldtattooconvention.com">
+      <img src='http://www.worldtattooconvention.com/img/loadingAnimation.gif'>
+    </a>
+   </li>
+   <li>
+    <a href="http://noumeni.us">
+      <img src='http://noumeni.us/blog/wp-content/uploads/2010/02/logoNoumeniusRich-300x77.png'>
+    </a>
+  </li>
   <li>
-    <a href='http://visualma.com' target='_blank'>
+    <a href="http://visualma.com">
       <img src='http://el70.com/img/visualma.png'>
     </a>
   </li>
-  <li>
-    <a href='http://el70.com' target='_blank'>
-      <img src='http://el70.com/img/uku.png'>
+    <li>
+    <a href="http://www.escalando.net">
+      <img src='http://www.escalando.net/zonas/img/logo.png'>
     </a>
   </li>
-  <li>
-    <a href='http://el70.com' target='_blank'>
-      <img src='http://el70.com/img/tiagosan.png'>
-    </a>
-  </li>
+
 </ul>
-
-
+</div>
+<br/><br/>
 <hr/>
 
 <h2> Using swipeThis</h2>
@@ -133,24 +159,37 @@
 
 <h4> Import the scripts </h4>
 	<pre>
-	    &lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.1.6.1.min.js&quot;&gt;&lt;/script&gt; 
-	    &lt;script type=&quot;text/javascript&quot; src=&quot;/js/swipeThis.0.7.3.min.js&quot;&gt;&lt;/script&gt;
+	    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.1.6.1.min.js&quot;&gt;&lt;/script&gt; 
+	    &lt;script type=&quot;text/javascript&quot; src=&quot;js/swipeThis.0.7.3.min.js&quot;&gt;&lt;/script&gt;
 	</pre>
 <br/>
 
 <h4> The Markup </h4>
 <pre><code>
-    &lt;ul id="myGallery"&gt;
+<div class='swipeContent'>
+    &lt;ul id="myGallery" &gt;
         &lt;li&gt;&lt;img src='img/photo1.jpg'>&lt;/li&gt;
         &lt;li&gt;&lt;img src='img/photo2.jpg'>&lt;/li&gt;
         &lt;li&gt;&lt;img src='img/photo3.jpg'>&lt;/li&gt;
-    &lt;/ul&gt;
-    </code></pre>
+    &lt;/ul&gt; 	
+</div>
+</code></pre>
 <br/>
 
 <h4> The style</h4>
 <pre>
-&amp;lt;style  type=&quot;text/css&quot;&amp;gt;
+&lt;style  type=&quot;text/css&quot;&amp;gt;
+
+  /* Your list should have a container with an established width and height */
+      .swipeContent {
+        height:200px;
+        width:400px;
+        margin-left:auto;
+        margin-right:auto;
+     }
+
+
+  /* No need to edit down here...*/
       .swipeThis {
         overflow:hidden;
       }
@@ -170,7 +209,7 @@
         background-image:url(&#39;img/trans.png&#39;);
 	cursor:move;
     }
-&amp;lt;/style&amp;gt;
+&lt;/style&gt;
 </pre>    
 
 <h3>Swipe It!</h3>
@@ -185,8 +224,11 @@
 <pre>
  <span class='claro'>$(document).ready(function() {</span>
     $('#myGallery').swipeThis({
-        multiple:true,
-        marginRight:15,
+      	'fillContainer': false,
+	'multiple': true,
+	'itemWidth': 272,
+	'itemHeight': 100, 
+	'marginRight' : 20,
         indicator:'/img/swipeIndicator.png'});
   <span class='claro'>});</span>
 </pre> 
