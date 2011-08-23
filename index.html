@@ -24,6 +24,7 @@
     a { color: #ec5e46; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
+    .claro { color:#444; }
     pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
@@ -54,6 +55,21 @@
   
     <script type="text/javascript" src="https://raw.github.com/pfortes/swipeThis/master/js/jquery.1.6.1.min.js"></script> 
     <script type="text/javascript" src="https://raw.github.com/pfortes/swipeThis/master/js/jquery.swipeThis.0.7.3.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('#demo').swipeThis();
+      
+      $('#demo2').swipeThis({
+        multiple:true,
+        marginRight:15,
+        indicator:'https://raw.github.com/pfortes/swipeThis/master/img/flecha48x48.png'});
+    });
+
+    
+    </script>
+
+	
+	
 </head>
 
 <body>
@@ -159,16 +175,20 @@
 
 <h3>Swipe It!</h3>
 <pre>
-    $('#MyGallery').swipeThis();
+    <span class='claro'>$(document).ready(function() {</span>
+      $('#MyGallery').swipeThis();
+    <span class='claro'>});</span>
 </pre>
 <br/>
 
 <h4> Customize it! </h4>
 <pre>
+ <span class='claro'>$(document).ready(function() {</span>
     $('#myGallery').swipeThis({
         multiple:true,
         marginRight:15,
         indicator:'/img/swipeIndicator.png'});
+  <span class='claro'>});</span>
 </pre> 
 
 <br/>
