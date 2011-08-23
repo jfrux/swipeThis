@@ -74,10 +74,12 @@
       $('#demo').swipeThis();
       
       $('#demo2').swipeThis({
-        multiple:true,
-        itemWidth:200,
-        marginRight:5,
-        indicator:'https://raw.github.com/pfortes/swipeThis/master/img/flecha48x48.png'
+	'fillContainer': false,
+	'multiple': true,
+	'itemWidth': 272,
+	'itemHeight': 100, 
+	'marginRight' : 20,
+        'indicator':'https://raw.github.com/pfortes/swipeThis/master/img/flecha48x48.png'
       });
     });
 
@@ -209,8 +211,11 @@
 <pre>
  <span class='claro'>$(document).ready(function() {</span>
     $('#myGallery').swipeThis({
-        multiple:true,
-        marginRight:15,
+      	'fillContainer': false,
+	'multiple': true,
+	'itemWidth': 272,
+	'itemHeight': 100, 
+	'marginRight' : 20,
         indicator:'/img/swipeIndicator.png'});
   <span class='claro'>});</span>
 </pre> 
