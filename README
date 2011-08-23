@@ -7,7 +7,7 @@ Released under the GNU licence
 --------
 
 Dependencies
-  jQuery V1.X.X
+  jQuery V1.5
 
 Links:
   http://pfortes.github.com/swipeThis
@@ -15,5 +15,5 @@ Links:
 
 Browser Support
   A grade browsers
-  Tested in iPhone 3G, Galaxy Tab (Android 2.1 Froyo), Firefox 3.6, Chrome, Safari 
+  Tested in iPhone 3G, iPad 2, Galaxy Tab (Android 2.1 Froyo), Firefox 3.6, Chrome, Safari 
 
