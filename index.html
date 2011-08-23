@@ -159,24 +159,37 @@
 
 <h4> Import the scripts </h4>
 	<pre>
-	    &lt;script type=&quot;text/javascript&quot; src=&quot;/js/jquery.1.6.1.min.js&quot;&gt;&lt;/script&gt; 
-	    &lt;script type=&quot;text/javascript&quot; src=&quot;/js/swipeThis.0.7.3.min.js&quot;&gt;&lt;/script&gt;
+	    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery.1.6.1.min.js&quot;&gt;&lt;/script&gt; 
+	    &lt;script type=&quot;text/javascript&quot; src=&quot;js/swipeThis.0.7.3.min.js&quot;&gt;&lt;/script&gt;
 	</pre>
 <br/>
 
 <h4> The Markup </h4>
 <pre><code>
+<div class='swipeContent'>
     &lt;ul id="myGallery" &gt;
         &lt;li&gt;&lt;img src='img/photo1.jpg'>&lt;/li&gt;
         &lt;li&gt;&lt;img src='img/photo2.jpg'>&lt;/li&gt;
         &lt;li&gt;&lt;img src='img/photo3.jpg'>&lt;/li&gt;
-    &lt;/ul&gt;
-    </code></pre>
+    &lt;/ul&gt; 	
+</div>
+</code></pre>
 <br/>
 
 <h4> The style</h4>
 <pre>
-&amp;lt;style  type=&quot;text/css&quot;&amp;gt;
+&lt;style  type=&quot;text/css&quot;&amp;gt;
+
+  /* Your list should have a container with an established width and height */
+      .swipeContent {
+        height:200px;
+        width:400px;
+        margin-left:auto;
+        margin-right:auto;
+     }
+
+
+  /* No need to edit down here...*/
       .swipeThis {
         overflow:hidden;
       }
@@ -196,7 +209,7 @@
         background-image:url(&#39;img/trans.png&#39;);
 	cursor:move;
     }
-&amp;lt;/style&amp;gt;
+&lt;/style&gt;
 </pre>    
 
 <h3>Swipe It!</h3>
