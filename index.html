@@ -30,27 +30,32 @@
     .footer { text-align:center; padding-top:30px; font-style: italic; }
     
     /* ---------------
- *    Swipe This   
- * --------------- */
-.swipeThis {
-    overflow:hidden;
-}
-.swipeThis ul {
-    list-style:none;
-    position:relative;
-    margin:0px;
-    padding:0px;   
-}
-.swipeThis li {
-    display:block;
-    float:left;   
-}
-.swipeArea {
-    position:absolute;
-    z-index:30;
-    background-image:url('https://raw.github.com/pfortes/swipeThis/master/img/trans.png');
-    cursor:move;
-}
+     *    Swipe This   
+     * --------------- */
+    .swipeThis {
+        overflow:hidden;
+    }
+    .swipeThis ul {
+        list-style:none;
+        position:relative;
+        margin:0px;
+        padding:0px;   
+    }
+    .swipeThis li {
+        display:block;
+        float:left;   
+    }
+    .swipeArea {
+        position:absolute;
+        z-index:30;
+        background-image:url('https://raw.github.com/pfortes/swipeThis/master/img/trans.png');
+        cursor:move;
+    }
+    
+    .demoContent {
+     height:200px;
+     width:400px;
+    }
   </style>
   
     <script type="text/javascript" src="https://raw.github.com/pfortes/swipeThis/master/js/jquery.1.6.1.min.js"></script> 
@@ -98,16 +103,16 @@
 
 
 <h2> Simple Demo </h2>
-
- <ul id="demo" style='height:200px;'>
-        <li><img src='http://el70.com/img/donGoio.jpg'></li>
-        <li><img src='http://el70.com/img/fortesMusica.png'></li>
-        <li><img src='http://el70.com/img/mejicanLost.png'></li>
-    </ul>
-
+<div class='demoContent'>
+ <ul id="demo">
+    <li><img src='http://el70.com/img/donGoio.jpg'></li>
+    <li><img src='http://el70.com/img/fortesMusica.png'></li>
+    <li><img src='http://el70.com/img/mejicanLost.png'></li>
+  </ul>
+</div>
 <h2> Demo of Multiple Items with links </h2>
-
- <ul id="demo2" style='height:200px;'>
+<div class='demoContent'>
+ <ul id="demo2">
   <li>
     <a href='http://visualma.com' target='_blank'>
       <img src='http://el70.com/img/visualma.png'>
@@ -124,7 +129,7 @@
     </a>
   </li>
 </ul>
-
+</div>
 
 <hr/>
 
